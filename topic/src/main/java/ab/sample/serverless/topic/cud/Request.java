@@ -1,4 +1,4 @@
-package ab.sample.serverless.topic;
+package ab.sample.serverless.topic.cud;
 
 public class Request {
     String topicTitle;

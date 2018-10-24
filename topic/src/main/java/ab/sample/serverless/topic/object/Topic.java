@@ -1,5 +1,6 @@
-package ab.sample.serverless.topic;
+package ab.sample.serverless.topic.object;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
@@ -13,6 +14,15 @@ public class Topic {
     public Topic(String topicTitle, String topicContent) {
         this.topicTitle = topicTitle;
         this.topicContent = topicContent;
+    }
+
+    public Topic(String topicId, String topicTitle, String topicContent) {
+        this(topicTitle, topicContent);
+        this.topicId = topicId;
+    }
+
+    public Topic() {
+
     }
 
     @DynamoDBHashKey(attributeName="topicId")
@@ -33,6 +43,7 @@ public class Topic {
         this.topicTitle = topicTitle;
     }
 
+    @DynamoDBAttribute
     public String getTopicContent() {
         return topicContent;
     }
