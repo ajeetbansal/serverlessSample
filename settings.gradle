@@ -1,4 +1,4 @@
 rootProject.name = 'serverlessSample'
 include 'common'
-include 'serverlessTemplate'
+include 'topic'
 
