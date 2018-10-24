@@ -1,0 +1,4 @@
+ext {
+    namespace='aggregatortech'
+    servicePort='9500'
+}
